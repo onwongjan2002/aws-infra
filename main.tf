@@ -26,9 +26,8 @@ module "eks" {
   subnet_ids = module.vpc.private_subnets
 
   enable_irsa     = true
-  manage_aws_auth = true
 
-  node_groups = {
+eks_managed_node_groups = {
     default = {
       desired_capacity = 2
       max_capacity     = 2
